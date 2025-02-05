@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.question-container {
+  color: #1d1d1f;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 15px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+label {
+  font-size: 17px;
+  font-weight: bold;
+  margin-left: 5px;
+  margin-bottom: 0.5rem;
+}
+
+select,
+input[type='number'] {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ebebeb;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  font-size: 14px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 2rem;
+}
+
+select {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 10"><polygon points="0,0 20,0 10,10" fill="%23666"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+select:focus,
+input[type='number']:focus {
+  outline: none;
+  border-color: #c4c4c4;
+}
+
+.diagnose-btn {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ebebeb;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.diagnose-btn:hover {
+  background-color: #45a049;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-left: 5px;
+}
+
+.res-box {
+  font-size: 0.9rem;
+  color: #626262;
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.response-text {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 2px;
+  display: inline;
+}
+
+.res-box ul {
+  padding-left: 0;
+  margin-left: 5px;
+  list-style-position: inside;
+  display: inline-block;
+}
+
+.res-box ul li {
+  color: #333;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.waiting-text {
+  color: #777;
+  font-style: italic;
+}
