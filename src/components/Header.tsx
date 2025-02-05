@@ -7,7 +7,7 @@ const Header: React.FC = () => {
     <div className='header-bar'>
       <div className='header-container'>
         <Link to='/' className='header-title'>
-          CocoaCare Diagnosis
+          CocoaCare
         </Link>
         <div className='header-links'>
           <Link to='#' className='header-link'>
