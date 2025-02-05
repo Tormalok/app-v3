@@ -185,7 +185,7 @@ const Question: React.FC = () => {
 
       <div className='form-field'>
         <button className='diagnose-btn' onClick={handleDiagnose}>
-          Diagnose
+          Submit
         </button>
       </div>
 
