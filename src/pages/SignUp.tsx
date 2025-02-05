@@ -19,10 +19,7 @@ const SignUp: React.FC = () => {
         password,
       });
       setMessage('Account created successfully!');
-
-      setTimeout(() => {
-        navigate('/login');
-      }, 2000);
+      navigate('/login');
     } catch (err: any) {
       setMessage(err.response?.data?.error || 'Sign Up failed');
     }
