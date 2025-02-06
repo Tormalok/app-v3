@@ -11,6 +11,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
 }
 
 .header-container {
@@ -39,7 +40,8 @@
 
 .header-links {
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  justify-content: flex-end;
 }
 
 .header-link {
@@ -48,8 +50,35 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   font-size: 0.9rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .header-link:hover {
+  color: #4f8af1;
+  transform: translateY(-2px);
+}
+
+.header-link:active {
+  transform: translateY(0);
+}
+
+.header-button {
   text-decoration: none;
+  color: #1d1d1f;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  border: none;
+  background-color: rgba(250, 250, 250, 0.5);
+}
+
+.header-button:hover {
+  color: #4f8af1;
+  transform: translateY(-2px);
+}
+
+.header-button:active {
+  transform: translateY(0);
 }

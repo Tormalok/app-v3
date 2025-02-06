@@ -28,6 +28,31 @@ const Question: React.FC = () => {
   const [actions, setActions] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
 
+  const responseMessages = [
+    'After analyzing the inputs, the following steps are recommended to address the issue.',
+    'Based on the data provided, the actions to help mitigate the situation are outlined below.',
+    'The conditions have been reviewed, and the following recommendations for your crops are suggested.',
+    'According to the analysis, actionable steps to improve the situation are listed below.',
+    'Based on the diagnosis, necessary actions to take moving forward are provided.',
+    'The following helpful steps are recommended based on the provided data.',
+    'A course of action to manage the condition effectively is outlined below.',
+    'After considering all factors, the recommended steps for better crop care are listed.',
+    'To optimize crop health, the following actions are advised.',
+    'The diagnostic process has led to the following key recommendations for next steps.',
+    'The following expert-recommended actions are based on the current state of the crops.',
+    'Following a thorough assessment, these steps should be followed.',
+    'The situation has been reviewed, and the following steps to improve crop health are suggested.',
+    'The actions to address the diagnosed issue effectively are outlined below.',
+    'Based on the current condition of the crops, the following steps are recommended.',
+    'After analyzing the data, the most effective actions to take are presented below.',
+    'The recommended steps based on the current diagnosis for your crops are outlined.',
+    'Based on the analysis, the suggested next steps to ensure optimal crop growth are provided.',
+    'The issue has been identified, and the following steps to resolve it are suggested.',
+  ];
+
+  const randomResponse =
+    responseMessages[Math.floor(Math.random() * responseMessages.length)];
+
   useEffect(() => {
     const fetchDiseases = async () => {
       try {
@@ -195,10 +220,7 @@ const Question: React.FC = () => {
           <p className='error'>{error}</p>
         ) : actions.length > 0 ? (
           <>
-            <p className='response-text'>
-              Based on my diagnosis, here are some recommended steps to help you
-              manage the issue:
-            </p>
+            <p className='response-text'>{randomResponse}</p>
             <ul>
               {actions.map((action, index) => (
                 <li key={index}>{action}</li>

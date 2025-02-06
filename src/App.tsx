@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
 import AuthContext from './AuthContext';
 import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
@@ -30,10 +35,12 @@ const App: React.FC = () => {
     <AuthContext.Provider value={{ token, setToken: handleSetToken }}>
       <Router>
         <Routes>
-          <Route path='/' element={<SignUp />} />{' '}
+          <Route
+            path='/'
+            element={token ? <Home /> : <Navigate to='/login' />}
+          />
           <Route path='/login' element={<LogIn />} />
           <Route path='/signup' element={<SignUp />} />
-          <Route path='/home' element={<Home />} />{' '}
         </Routes>
       </Router>
     </AuthContext.Provider>

@@ -25,7 +25,7 @@ const LogIn: React.FC = () => {
       setToken(token);
       localStorage.setItem('token', token);
       setMessage('Login successful!');
-      navigate('/home');
+      navigate('/');
     } catch (err: any) {
       setMessage(err.response?.data?.error || 'Login failed');
     }
